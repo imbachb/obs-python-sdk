@@ -669,8 +669,7 @@ class _BasicClient(object):
                 except Exception:
                     conn = httplib.HTTPSConnection(server, port=port, timeout=self.timeout)
             else:
-                conn = httplib.HTTPSConnection(server, port=port, timeout=self.timeout, context=self.context,
-                                               check_hostname=None)
+                conn = httplib.HTTPSConnection(server, port=port, timeout=self.timeout, context=self.context)
         else:
             conn = httplib.HTTPConnection(server, port=port, timeout=self.timeout)
 
